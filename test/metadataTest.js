@@ -35,11 +35,11 @@ describe('metadata', function () {
       entityType.Property[3].$.Name.should.be.eql('addresses')
       entityType.Property[3].$.Type.should.be.eql('Collection(jsreport.AddressType)')
 
-      // var complexType = schema.ComplexType[0]
-      // complexType.should.be.ok()
-      // complexType.$.Name.should.be.eql('AddressType')
-      // complexType.Property[0].$.Name.should.be.eql('street')
-      // complexType.Property[0].$.Type.should.be.eql('Edm.String')
+      var complexType = schema.ComplexType[0]
+      complexType.should.be.ok()
+      complexType.$.Name.should.be.eql('AddressType')
+      complexType.Property[0].$.Name.should.be.eql('street')
+      complexType.Property[0].$.Type.should.be.eql('Edm.String')
 
       var entityContainer = schema.EntityContainer[0]
       entityContainer.should.be.ok()
